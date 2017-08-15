@@ -1,5 +1,5 @@
-OpenID Provider
-    An OAuth 2.0 authorization server that can provide claims to a client, or Relying Party (RP)
+OpenID Provider:
+    An OAuth 2.0 authorization server
     
 Relying party:
-    a client application that requires claims from an OpenID Provider (OP)
+    A client application that requires claims from an OpenID Provider (OP)
