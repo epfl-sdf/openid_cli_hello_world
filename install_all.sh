@@ -1,7 +1,7 @@
-# fichier d'installation de tous les elements necessaires au set-up d'un serveur d'authentification OpenID Connect
+# install all required library, file, configurations necessary to set up an authentification server
 
-# library Gluu (Java)
+# Gluu library (Java)
 
-# serveur Gluu
+# Keycloak server
 
-# app d'authentification
+# app d'authentification?
