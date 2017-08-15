@@ -1,0 +1,5 @@
+OpenID Provider
+    An OAuth 2.0 authorization server that can provide claims to a client, or Relying Party (RP)
+    
+Relying party:
+    a client application that requires claims from an OpenID Provider (OP)
