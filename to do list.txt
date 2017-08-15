@@ -1,0 +1,5 @@
+1. look every certified solution on OpenID website (a solution without demo mode is not a solution)
+
+2. compare solutions 
+
+3. choose and produce demo
