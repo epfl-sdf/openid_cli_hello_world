@@ -7,6 +7,6 @@ echo "setting up Gluu library: "
 
 # Keycloak server
 echo "setting up Keycloak server "
-#./install_Keycloak.sh
+./install_Keycloak.sh
 
 # authentification app?
