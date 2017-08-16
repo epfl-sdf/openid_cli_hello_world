@@ -5,3 +5,5 @@ Relying party (RP):
     A client application that requires claims from an OpenID Provider (OP)
 
 Types of OP and RP: http://openid.net/wordpress-content/uploads/2016/12/OpenID-Connect-Conformance-Profiles.pdf
+
+OpenID - Module Server: https://openid.github.io/python/docs/latest/openid.server.server-module.html
