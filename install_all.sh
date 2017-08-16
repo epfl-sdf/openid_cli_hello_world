@@ -3,4 +3,4 @@ echo "--- Installing set-up for OpenID Connect server ---"
 
 # Gluu library (Java)
 echo "setting up Gluu library: "
-./install_Gluu.sh
+./install_Gluu_RP.sh
