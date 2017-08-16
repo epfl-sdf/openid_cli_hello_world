@@ -1,5 +1,8 @@
-echo "Go to https://oxd.gluu.org/ to get an oxd license"
 read -p "Enter Your license id: "  license_id
+while [[ -z "$license_id" ]]
+do
+  read -p "Enter Your license id: "  license_id
+done
 read -p "Enter Your public key: "  public_key
 read -p "Enter Your public password: "  public_password
 read -p "Enter Your license password: "  license_password
