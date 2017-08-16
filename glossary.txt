@@ -1,5 +1,5 @@
-OpenID Provider:
+OpenID Provider (OP): https://wiki.mozilla.org/Security/Guidelines/OpenID_Connect
     An OAuth 2.0 authorization server
     
-Relying party:
+Relying party (RP):
     A client application that requires claims from an OpenID Provider (OP)
