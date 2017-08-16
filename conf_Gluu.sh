@@ -4,8 +4,20 @@ do
   read -p "Enter Your license id: "  license_id
 done
 read -p "Enter Your public key: "  public_key
+while [ -z "$public_key" ]
+do
+  read -p "Enter Your license id: "  public_key
+done
 read -p "Enter Your public password: "  public_password
+while [ -z "$public_password" ]
+do
+  read -p "Enter Your license id: "  public_password
+done
 read -p "Enter Your license password: "  license_password
+while [ -z "$license_password" ]
+do
+  read -p "Enter Your license id: "  license_password
+done
 
 sudo echo "{
     \"port\":8099,
