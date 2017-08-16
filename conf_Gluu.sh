@@ -1,5 +1,5 @@
 read -p "Enter Your license id: "  license_id
-while [[ -z "$license_id" ]]
+while [ -z "$license_id" ]
 do
   read -p "Enter Your license id: "  license_id
 done
