@@ -1,5 +1,5 @@
-1. look every certified solution on OpenID website (a solution without demo mode is not a solution)
+1. set up Gluu OP (server) and Gluu RP (application) by friday
 
-2. compare solutions 
+2. observer mitm (optionnal)
 
-3. choose and produce demo
+3. create proxy tequilla->Gluu to make epfl applications Gluu compatible
