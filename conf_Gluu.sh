@@ -12,10 +12,10 @@ sudo echo "{
     \"trust_all_certs\":true,
     \"trust_store_path\":\"\",
     \"trust_store_password\":\"\",
-    \"license_id\":\"\", $license_id
-    \"public_key\":\"\", $public_key
-    \"public_password\":\"\", $public_password    
-    \"license_password\":\"\", $license_password
+    \"license_id\":\"$license_id\",
+    \"public_key\":\"$public_key\",
+    \"public_password\":\"$public_password\",   
+    \"license_password\":\"$license_password\",
     \"support-google-logout\": true,
     \"state_expiration_in_minutes\":5,
     \"nonce_expiration_in_minutes\":5
