@@ -1,4 +1,6 @@
-1. set up Gluu OP (server) and Gluu RP (application) by friday
+TODOS for thursday:
+
+1. connect oxd client server with gluu server
 
 2. observer mitm (optionnal)
 
