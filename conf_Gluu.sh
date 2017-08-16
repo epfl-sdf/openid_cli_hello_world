@@ -19,4 +19,4 @@ sudo echo "{
     \"support-google-logout\": true,
     \"state_expiration_in_minutes\":5,
     \"nonce_expiration_in_minutes\":5
-}" | sudo tee --append /opt/oxd-server/conf/oxd-conf.json 
+}" | sudo tee /opt/oxd-server/conf/oxd-conf.json 
