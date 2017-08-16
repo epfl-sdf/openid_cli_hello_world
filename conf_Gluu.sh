@@ -37,11 +37,25 @@ sudo echo "{
     \"nonce_expiration_in_minutes\":5
 }" | sudo tee /opt/oxd-server/conf/oxd-conf.json 
 
-
+read -p "Enter Your op_host: "  op_host
+while [ -z "$op_host" ]
+do
+  read -p "Enter Your op_host: "  op_host
+done
+read -p "Enter Your authorization_redirect_uri: "  authorization_redirect_uri
+while [ -z "$authorization_redirect_uri" ]
+do
+  read -p "Enter Your authorization_redirect_uri: "  authorization_redirect_uri
+done
+read -p "Enter Your post_logout_redirect_uri: " post_logout_redirect_uri
+while [ -z "$post_logout_redirect_uri" ]
+do
+  read -p "Enter Your post_logout_redirect_uri: "  post_logout_redirect_uri
+done
 sudo echo "{
-    \"op_host\":\"\",
-    \"authorization_redirect_uri\":\"\",
-    \"post_logout_redirect_uri\":\"\",
+    \"op_host\":\"$op_host\",
+    \"authorization_redirect_uri\":\"$authorization_redirect_uri\",
+    \"post_logout_redirect_uri\":\"$post_logout_redirect_uri\",
     \"response_types\":[\"code\"],
     \"grant_type\":[\"authorization_code\"],
     \"acr_values\":[\"basic\"],
