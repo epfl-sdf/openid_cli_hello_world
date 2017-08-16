@@ -36,3 +36,18 @@ sudo echo "{
     \"state_expiration_in_minutes\":5,
     \"nonce_expiration_in_minutes\":5
 }" | sudo tee /opt/oxd-server/conf/oxd-conf.json 
+
+
+sudo echo "{
+    \"op_host\":\"\",
+    \"authorization_redirect_uri\":\"\",
+    \"post_logout_redirect_uri\":\"\",
+    \"response_types\":[\"code\"],
+    \"grant_type\":[\"authorization_code\"],
+    \"acr_values\":[\"basic\"],
+    \"scope\":[\"openid\", \"profile\"],
+    \"ui_locales\":[\"en\"],
+    \"claims_locales\":[\"en\"],
+    \"client_jwks_uri\":\"\",
+    \"contacts\":[]
+}" | sudo tee /opt/oxd-server/conf/oxd-default-site-config.json
