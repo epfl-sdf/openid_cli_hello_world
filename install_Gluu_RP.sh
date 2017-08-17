@@ -4,4 +4,6 @@ curl https://repo.gluu.org/ubuntu/gluu-apt.key | sudo apt-key add -
 sudo apt-get update
 sudo apt-get install gluu-oxd-server
 
+service gluu-oxd-server start
+
 ./conf_Gluu.sh
