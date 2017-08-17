@@ -1,3 +1,4 @@
+echo "Configuration file 1:"
 read -p "Enter Your license id: "  license_id
 while [ -z "$license_id" ]
 do
@@ -19,6 +20,7 @@ do
   read -p "Enter Your license id: "  license_password
 done
 
+echo "oxd-conf.json:"
 sudo echo "{
     \"port\":8099,
     \"localhost_only\":true,
@@ -37,6 +39,7 @@ sudo echo "{
     \"nonce_expiration_in_minutes\":5
 }" | sudo tee /opt/oxd-server/conf/oxd-conf.json 
 
+echo "Configuration file 2:"
 read -p "Enter Your op_host: "  op_host
 while [ -z "$op_host" ]
 do
@@ -52,6 +55,8 @@ while [ -z "$post_logout_redirect_uri" ]
 do
   read -p "Enter Your post_logout_redirect_uri: "  post_logout_redirect_uri
 done
+
+echo "oxd-default-site-config.json:"
 sudo echo "{
     \"op_host\":\"$op_host\",
     \"authorization_redirect_uri\":\"$authorization_redirect_uri\",
