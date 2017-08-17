@@ -1,0 +1,17 @@
+Source: gluu-oxd-python
+Section: python
+Priority: optional
+Maintainer: Adrian Alves <adrian@gluu.org>
+Build-Depends: debhelper (>= 9.0.0),
+               dh-python,
+               python-all,
+               python-setuptools,
+               python-nose
+Standards-Version: 3.9.5
+Homepage: https://github.com/GluuFederation/oxd-python
+
+Package: gluu-oxd-python
+Architecture: all
+Depends: ${python:Depends}, ${misc:Depends}, python-nose
+Description: Python libs for oxd server
+ Python bindings for Gluu OxD server

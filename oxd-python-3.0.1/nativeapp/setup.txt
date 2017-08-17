@@ -1,0 +1,64 @@
+setup.txt
+=========
+
+This document explains the "proof of concept" setup which is prepared for the native app authentication
+and authorizaiton using OpenID Connect.
+
+oxAuth Custom Authenticaion
+===========================
+oxAuth provides a way to enable and create custom authentication methods using "Interception Scripts".
+
+For a browser-less authentication, the credentials to authenticate need to be sent in a browser-independent
+way. For simplicity, a HTTP POST mechanism can be employed.
+
+    Interception Script Functionality
+    ---------------------------------
+    When the client hits the authorization URL, it is intercepted by the interception script by matching
+    the acr_value set by the client. The interception script would filter the request by user-agent and
+    verify it is indeed serving the expected client and render a HTML Form otherwise.
+
+    If the user agent is as expected, then it sends a message that would be shown to the user (a prompt
+    to enter credential). This message passing is required to avoid any dependency from the client side
+    and can be used as a way to verify as humans (like a math operation captcha mechanism).
+
+    Note: A custom URL to send user credentials can be sent in the HTTP header and other information
+    like session ID can be used to avoid cross site requests can be employed for added security measure.
+
+    The client sends the credential supplied by the user via a HTTP POST request. This information is
+    verified and the user is authenticated.
+
+    Project use-case
+    ----------------
+    This proof of concept uses the OATH specifications to authenticate the user using an OTP
+    (One Time Password). The python-oath library[1] can be imported by the interception script for
+    verifying the user's supplied OTP. The oath.google_authenticator module requires the uri and the
+    time to generate OTP. URI is in the format: otpauth://TYPE/LABEL?PARAMETERS.
+
+    e.g., otpauth://totp/demouser@gluu.org?secret=base32_encoded_key
+
+    This Base32 secret key needs to be genrated for the users and stored in their LDAP profile.
+
+    The Interception script when verifying a user will fetch the secret using the UserSerivce of the
+    oxauth.service Java library and generate the OTP.
+
+Native client
+=============
+The ultimate goal for this proof of concept is to employ OpenID Connect to perform system level
+authentication using the OpenID Connect, thus taking SSO from web to the system level.
+
+Almost all systems in the world employ textual password entry as a mechanism of authentication
+and in many cases that is the only method employed. Hence a command line script can act as the
+client.
+
+    Client functionality
+    -------------------
+    The script should register itself as native client with the OpenID Provider. It should mention
+    `oath` as the authentication mechanism in its acr_value. It can employ the 'Authorization Code
+    Flow' and use prompt=none in the authorizaiton URL to eliminate user interaction after authentication.
+
+    Project use-case
+    ----------------
+    The client is a python script which would use the requests library to make HTTP requests.
+    The user OTP is generated using the Google Authenticator mobile application.
+
+[1] Python-oath  https://github.com/bdauvergne/python-oath

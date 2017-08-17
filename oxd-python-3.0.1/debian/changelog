@@ -1,0 +1,5 @@
+gluu-oxd-python (2.0-2) trusty; urgency=low
+
+  * Initial release (Closes: #2322)
+
+ -- Adrian Alves <adrian@gluu.org>  Wed, 29 Jun 2016 07:56:03 -0400
