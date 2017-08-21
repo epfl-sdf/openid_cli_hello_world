@@ -10,8 +10,11 @@ Settings.json is used as a configuration file for the example app.
 In order to register the web application in the Gluu server, login in the Gluu server as admin to https://localhost. Manually create a client by selecting in the side bar OpenID Connect > clients, then "add client".
 
 Set the following parameters:
+
 Client Secret: your client id secret of your choosing
+
 Application Type: Native
+
 Pre-Authorization: True
 Persist Client Authorizations: False
 Subject Type: Pairwise
