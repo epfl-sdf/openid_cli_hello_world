@@ -5,9 +5,9 @@ Fully based on https://github.com/curityio/example-python-openid-connect-client
 
 1. clone the repository https://github.com/curityio/example-python-openid-connect-client
 
-2.. Register the client in your OpenID server:
+2. Register the client in your OpenID server:
 
-(Gluu server example)
+(Gluu server example)<br>
 3. fill out the following:
   Client Name: (eg. python-client-example)
   Application Type: Web
