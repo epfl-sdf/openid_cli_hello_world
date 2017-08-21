@@ -16,14 +16,23 @@ Client Secret: your client id secret of your choosing
 Application Type: Native
 
 Pre-Authorization: True
+
 Persist Client Authorizations: False
+
 Subject Type: Pairwise
+
 JWS alg Algorithm for signing the UserInfo Responses: None
+
 JWS alg Algorithm for signing Request Objects: None
+
 Authentication method for the Token Endpoint: None
+
 JWS alg Algorithm for Authentication method to Token Endpoint: None
+
 Redirect Login URIs: https://google.ch
+
 Logout Session Required: False
+
 
 Leave the other fields empty.
 Go at the bottom of the page, click "Add Scope", put openid in the search bar, click search, check the checkbox to add openid as a scope, then ok.
