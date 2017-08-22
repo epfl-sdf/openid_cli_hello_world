@@ -20,7 +20,7 @@
 sudo apt-get install python-setuptools
 
 #Install python-installer for specific version of python and a virtual environnement
-easy_install --user pip
+sudo easy_install --user pip
 
 #Install virtual environnement for the application to work specifically with python 2.7.12 
 #(http://python-guide-pt-br.readthedocs.io/fr/latest/dev/virtualenvs.html)
