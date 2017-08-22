@@ -4,10 +4,8 @@
 
 #source: 
 
-THEIP=$(/sbin/ifconfig ens18 | /bin/grep "inet ad" | /usr/bin/cut -f2 -d: | /usr/bin/awk '{print $1}')
 
 
-#virtFold="venvURL"
 
 # Teste si les arguments sont bien passés 
 #if (( $# < 2 ))
@@ -44,9 +42,12 @@ https://$THEIP:5443
 
 "
 
-#Launch virtual environnement
-source ./.venv/bin/activate
+THEIP=$(/sbin/ifconfig ens18 | /bin/grep "inet ad" | /usr/bin/cut -f2 -d: | /usr/bin/awk '{print $1}')
 
-#source $virtFold/bin/activate 
+virtFold="venvOpenid"
+source $virtFold/bin/activate
 
 python app.py
+
+deactivate
+

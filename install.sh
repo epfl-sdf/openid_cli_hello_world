@@ -16,21 +16,18 @@
 #pip3 install beautifulsoup4
 #deactivate
 
-echo ------------ apt-get install python3
-sudo apt-get install -y python3 python3-pip
 
 echo ------------ install virtualenv
+sudo apt-get -y install python-pip
 sudo pip2 install virtualenv
-#Create virtual environement folder
-virtualenv ./.venv
 
-#Install python 2.7.12
-sudo apt-get install python2.7.12
+#Create virtual environement folder
+virtFold="venvOpenid"
+rm -rf $virtFold
+virtualenv -p /usr/bin/python2 $virtFold
+source $virtFold/bin/activate
 
 #Install required packages
-pip install Flask-SSLify
-sudo apt install Flask-SSLify-pip
-sudo pip install pycryptodomex
+pip2 install -r requirements.txt
 
-#Make the virtual environnement use python 2.7.12
-sudo virtualenv -p /usr/bin/python2.7 venv
+deactivate
