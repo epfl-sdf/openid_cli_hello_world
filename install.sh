@@ -18,6 +18,7 @@
 
 #Install a python tool to install python-installer (http://sametmax.com/votre-python-aime-les-pip/)
 sudo apt-get install python-setuptools
+sudo apt-get install python-pip python-dev build-essential 
 
 #Install python-installer for specific version of python and a virtual environnement
 sudo easy_install --user pip
