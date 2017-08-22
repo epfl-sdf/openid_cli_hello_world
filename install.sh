@@ -29,7 +29,7 @@ sudo pip install --upgrade virtualenv
 
 #Install virtual environnement for the project
 #(http://python-guide-pt-br.readthedocs.io/fr/latest/dev/virtualenvs.html)
-virtualenv venv
+sudo virtualenv venv
 
 #Install python 2.7.12
 sudo apt-get install python2.7.12
