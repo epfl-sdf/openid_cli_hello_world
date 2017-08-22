@@ -1,9 +1,15 @@
+## Installation
+```bash
+$ sh install.sh
+```
+Run the install script.
+
 ## Usage
 
 ```bash
-$ python app.py
+$ sh start.sh
 ```
-Run the python script, then browse to https://localhost:5443 to see the app.
+Run the script, then browse to https://localhost:5443 (or the adress shown in the terminal) to see the app.
 
 ## settings.json
 Settings.json is used as a configuration file for the example app.
