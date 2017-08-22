@@ -56,3 +56,6 @@ Name            | Type    | Mandatory | Default  | Description
 $ sh start.sh
 ```
 Run the script, then browse to https://localhost:5443 (or the adress shown in the terminal) to see the app.
+
+## Acknowledgements
+Most of the code is from: https://github.com/curityio/example-python-openid-connect-client made by https://curity.io
