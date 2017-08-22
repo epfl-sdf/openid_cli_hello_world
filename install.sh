@@ -20,9 +20,9 @@ echo ------------ apt-get install python3
 sudo apt-get install -y python3 python3-pip
 
 echo ------------ install virtualenv
-sudo pip3 install virtualenv
+sudo pip2 install virtualenv
 #Create virtual environement folder
-sudo virtualenv ./.venv
+virtualenv ./.venv
 
 #Install python 2.7.12
 sudo apt-get install python2.7.12
