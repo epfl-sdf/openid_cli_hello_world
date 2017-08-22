@@ -17,7 +17,7 @@
 #deactivate
 
 echo ------------ apt-get install python3
-sudo apt-get install -y python2 python2-pip
+sudo apt-get install -y python3 python3-pip
 
 echo ------------ install virtualenv
 sudo pip2 install virtualenv
