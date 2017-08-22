@@ -23,12 +23,11 @@ sudo apt-get install python-pip python-dev build-essential
 #Install python-installer for specific version of python and a virtual environnement
 sudo easy_install --user pip
 
-#Install virtual environnement for the application to work specifically with python 2.7.12 
-#(http://python-guide-pt-br.readthedocs.io/fr/latest/dev/virtualenvs.html)
-sudo pip install --upgrade virtualenv
-
 #Install virtual environnement for the project
 #(http://python-guide-pt-br.readthedocs.io/fr/latest/dev/virtualenvs.html)
+sudo apt install virtualenv
+
+#Create virtual environement folder
 sudo virtualenv venv
 
 #Install python 2.7.12
@@ -39,5 +38,4 @@ sudo pip install "Flask==0.10.1"
 sudo pip install "pyjwkest==1.3.1"
 
 #Make the virtual environnement use python 2.7.12
-sudo apt install virtualenv
 sudo virtualenv -p /usr/bin/python2.7 venv
