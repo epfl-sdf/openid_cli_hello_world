@@ -24,7 +24,7 @@ sudo easy_install --user pip
 
 #Install virtual environnement for the application to work specifically with python 2.7.12 
 #(http://python-guide-pt-br.readthedocs.io/fr/latest/dev/virtualenvs.html)
-sudo pip install virtualenv
+sudo pip install --upgrade virtualenv
 
 #Install virtual environnement for the project
 #(http://python-guide-pt-br.readthedocs.io/fr/latest/dev/virtualenvs.html)
