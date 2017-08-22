@@ -16,19 +16,13 @@
 #pip3 install beautifulsoup4
 #deactivate
 
-#Install a python tool to install python-installer (http://sametmax.com/votre-python-aime-les-pip/)
-sudo apt-get install python-setuptools
-sudo apt-get install python-pip python-dev build-essential 
+echo ------------ apt-get install python3
+sudo apt-get install -y python2 python2-pip
 
-#Install python-installer for specific version of python and a virtual environnement
-sudo easy_install --user pip
-
-#Install virtual environnement for the project
-#(http://python-guide-pt-br.readthedocs.io/fr/latest/dev/virtualenvs.html)
-sudo apt install virtualenv
-
+echo ------------ install virtualenv
+sudo pip2 install virtualenv
 #Create virtual environement folder
-sudo virtualenv venv
+virtualenv ./.venv
 
 #Install python 2.7.12
 sudo apt-get install python2.7.12
