@@ -28,8 +28,9 @@ virtualenv ./.venv
 sudo apt-get install python2.7.12
 
 #Install required packages
-sudo pip install "Flask==0.10.1"
-sudo pip install "pyjwkest==1.3.1"
+pip install Flask-SSLify
+sudo apt install Flask-SSLify-pip
+sudo pip install pycryptodomex
 
 #Make the virtual environnement use python 2.7.12
 sudo virtualenv -p /usr/bin/python2.7 venv
