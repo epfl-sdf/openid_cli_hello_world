@@ -4,40 +4,34 @@ $ sh install.sh
 ```
 Run the install script.
 
-## Usage
-
-```bash
-$ sh start.sh
-```
-Run the script, then browse to https://localhost:5443 (or the adress shown in the terminal) to see the app.
-
-## settings.json
+## Configuration
+Before launching the start.sh, you have to configure the web application for it to connect to your server.
 Settings.json is used as a configuration file for the example app.
-In order to register the web application in the Gluu server, login in the Gluu server as admin to https://localhost. Manually create a client by selecting in the side bar OpenID Connect > clients, then "add client".
+In order to register the web application in the Gluu server, login in the Gluu server as admin to https://<server IP>. Manually create a client by selecting in the side bar OpenID Connect > clients, then "add client".
 
 Set the following parameters:
 
-Client Secret: your client id secret of your choosing
+  Client Secret: your client id secret of your choosing
 
-Application Type: Native
+  Application Type: Native
 
-Pre-Authorization: True
+  Pre-Authorization: True
 
-Persist Client Authorizations: False
+  Persist Client Authorizations: False
 
-Subject Type: Pairwise
+  Subject Type: Pairwise
 
-JWS alg Algorithm for signing the UserInfo Responses: None
+  JWS alg Algorithm for signing the UserInfo Responses: None
 
-JWS alg Algorithm for signing Request Objects: None
+  JWS alg Algorithm for signing Request Objects: None
 
-Authentication method for the Token Endpoint: None
+  Authentication method for the Token Endpoint: None
 
-JWS alg Algorithm for Authentication method to Token Endpoint: None
+  JWS alg Algorithm for Authentication method to Token Endpoint: None
 
-Redirect Login URIs: https://google.ch
+  Redirect Login URIs: https://google.ch
 
-Logout Session Required: False
+  Logout Session Required: False
 
 
 Leave the other fields empty.
@@ -55,3 +49,10 @@ Name            | Type    | Mandatory | Default  | Description
 `authorization_endpoint` | URL |     |          | The URL to the authorization_endpoint.
 `token_endpoint`| URL     |           |          | The URL to the token_endpoint.
 `response_type`        | string  |   ✓       |          | Mandatory, hard coded.
+
+## Usage
+
+```bash
+$ sh start.sh
+```
+Run the script, then browse to https://localhost:5443 (or the adress shown in the terminal) to see the app.
