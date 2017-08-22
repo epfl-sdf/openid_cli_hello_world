@@ -57,5 +57,11 @@ $ sh start.sh
 ```
 Run the script, then browse to https://localhost:5443 (or the adress shown in the terminal) to see the app.
 
+## Stop
+```bash
+$ sh stop.sh
+```
+Run this script when you are done with the web application (closes the virtual environnement).
+
 ## Acknowledgements
 Most of the code is from: https://github.com/curityio/example-python-openid-connect-client made by https://curity.io
