@@ -39,4 +39,4 @@ sudo pip install "Flask==0.10.1"
 sudo pip install "pyjwkest==1.3.1"
 
 #Make the virtual environnement use python 2.7.12
-virtualenv -p /usr/bin/python2.7 venv
+sudo virtualenv -p /usr/bin/python2.7 venv
