@@ -45,7 +45,8 @@ https://$THEIP:5443
 "
 
 #Launch virtual environnement
-source venv/bin/activate
+source "/.venv/bin/activate"
+
 #source $virtFold/bin/activate 
 
 python app.py
