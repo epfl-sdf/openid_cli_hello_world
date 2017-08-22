@@ -1,6 +1,6 @@
 ## Installation
 ```bash
-$ sh install.sh
+$ ./install.sh
 ```
 Run the install script.
 
@@ -56,12 +56,6 @@ Name            | Type    | Mandatory | Default  | Description
 $ ./start.sh
 ```
 Run the script, then browse to https://localhost:5443 (or the adress shown in the terminal) to see the app.
-
-## Stop
-```bash
-$ ./stop.sh
-```
-Run this script when you are done with the web application (closes the virtual environnement).
 
 ## Acknowledgements
 Most of the code is from: https://github.com/curityio/example-python-openid-connect-client made by https://curity.io
