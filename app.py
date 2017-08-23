@@ -24,7 +24,6 @@ from urlparse import urlparse
 from client import Client
 from tools import decode_token, generate_random_string
 from validator import JwtValidator
-from config import Config
 
 _app = Flask(__name__)
 
@@ -61,7 +60,7 @@ def index():
                            session=user)
 
 
-@_app.route('/start-login')
+@_app.route('/login')
 def start_code_flow():
     """
     :return: redirects to the authorization server with the appropriate parameters set.
@@ -95,8 +94,7 @@ def refresh():
     try:
         token_data = _client.refresh(user.refresh_token)
     except Exception as e:
-        create_error('Could not refresh Access Token', e)
-        return
+        return create_error('Could not refresh Access Token', e)
     user.access_token = token_data['access_token']
     user.refresh_token = token_data['refresh_token']
     return redirect_with_baseurl('/')
@@ -137,9 +135,12 @@ def call_api():
             user.api_response = None
             if user.access_token:
                 try:
-                    request = urllib2.Request(_config['api_endpoint'])
-                    request.add_header("Authorization", "Bearer %s" % user.access_token)
-                    response = urllib2.urlopen(request)
+                    api_request = urllib2.Request(_config['api_endpoint'])
+
+                    # Assignment 4
+                    # Add the access token to the request
+
+                    response = urllib2.urlopen(api_request)
                     user.api_response = {'code': response.code, 'data': response.read()}
                 except urllib2.HTTPError as e:
                     user.api_response = {'code': e.code, 'data': e.read()}
@@ -177,20 +178,13 @@ def oauth_callback():
     if 'access_token' in token_data:
         user.access_token = token_data['access_token']
 
-    if _jwt_validator and 'id_token' in token_data:
+    if 'id_token' in token_data:
+        # Assignment 5
         # validate JWS; signature, aud and iss.
-        # Token type, access token, ref-token and JWT
-        if 'issuer' not in _config:
-            return create_error('Could not validate token: no issuer configured')
-
-        try:
-            _jwt_validator.validate(token_data['id_token'], _config['issuer'], _config['client_id'])
-        except BadSignature as bs:
-            return create_error('Could not validate token: %s' % bs.message)
-        except Exception as ve:
-            return create_error("Unexpected exception: %s" % ve.message)
-
         user.id_token = token_data['id_token']
+
+    if 'access_token' in token_data:
+        user.access_token = token_data['access_token']
 
     if 'refresh_token' in token_data:
         user.refresh_token = token_data['refresh_token']
@@ -207,7 +201,6 @@ def create_error(message, exception = None):
     :param message:
     :return: redirects to index.html with the error message
     """
-    print 'Caught error!'
     print message, exception
     if _app:
         user = None
@@ -228,9 +221,10 @@ def load_config():
         filename = sys.argv[1]
     else:
         filename = 'settings.json'
-    config = Config(filename)
+    print 'Loading settings from %s' % filename
+    config = json.loads(open(filename).read())
 
-    return config.load_config()
+    return config
 
 
 def redirect_with_baseurl(path):
@@ -248,7 +242,6 @@ if __name__ == '__main__':
         _jwt_validator = JwtValidator(_config)
     else:
         print 'Found no url to JWK set, will not be able to validate JWT signature.'
-        _jwt_validator = None
 
     # create a session store
     _session_store = {}
