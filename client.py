@@ -66,8 +66,9 @@ class Client:
 
         revoke_request = urllib2.Request(self.config['revocation_endpoint'])
         data = {
-                # Assignment 3
-                # Add the data to the revocation request
+                'token': token,
+            	'client_id': self.config['client_id'],
+            	'client_secret': self.config['client_secret']
         }
         urllib2.urlopen(revoke_request, urllib.urlencode(data), context=self.ctx)
 
@@ -78,8 +79,10 @@ class Client:
         :return: the new access token
         """
         data = {
-                # Assignment 2
-                # Add the data to the refresh request
+		'grant_type': 'refresh_token',
+            	'refresh_token': refresh_token,
+            	'client_id': self.config['client_id'],
+            	'client_secret': self.config['client_secret']
         }
         token_response = urllib2.urlopen(self.config['token_endpoint'], urllib.urlencode(data), context=self.ctx)
         return json.loads(token_response.read())
@@ -103,12 +106,26 @@ class Client:
         """
         # Assignment 1
         # Fill in the the missing data for the token request
-        data = {'client_id': self.config['client_id'], 
-                'grant_type': 'authorization_code'}
+        data = {
+		'scope': self.config['scope'],
+		'response_type': 'code',
+		'client_id': self.config['client_id'],
+		'redirect_uri': self.config['redirect_uri']
+		}
+	#https://gluu.org/docs/ce/api-guide/openid-connect-api/ (required fields from Gluu server)
 
         # Exchange code for tokens
+	print "trying to get the token from "
+	print self.config['token_endpoint']
+	print "\n with the following data"
+	print data
+	print "\n\n encoded data"
+	print urllib.urlencode(data)
+	print "\n\n"
         token_response = urllib2.urlopen(self.config['token_endpoint'], urllib.urlencode(data), context=self.ctx)
-        return json.loads(token_response.read())
+        print "token response:"
+	print token_response
+	return json.loads(token_response.read())
 
     def __authn_req_args(self, state):
         """

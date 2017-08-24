@@ -139,7 +139,8 @@ def call_api():
 
                     # Assignment 4
                     # Add the access token to the request
-
+		    api_request.add_header("Authorization", "Bearer %s" % user.access_token)
+			
                     response = urllib2.urlopen(api_request)
                     user.api_response = {'code': response.code, 'data': response.read()}
                 except urllib2.HTTPError as e:
@@ -167,6 +168,10 @@ def oauth_callback():
         return create_error('No code in response')
 
     try:
+	print " "
+	print " "
+	print " "
+	print request.args['code']	
         token_data = _client.get_token(request.args['code'])
     except Exception as e:
         return create_error('Could not fetch token(s)', e)
@@ -181,7 +186,9 @@ def oauth_callback():
     if 'id_token' in token_data:
         # Assignment 5
         # validate JWS; signature, aud and iss.
-        user.id_token = token_data['id_token']
+        print id_token
+
+	user.id_token = token_data['id_token']
 
     if 'access_token' in token_data:
         user.access_token = token_data['access_token']
