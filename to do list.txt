@@ -1,7 +1,3 @@
-TODOS for thursday:
-
-1. connect oxd client server with gluu server
-
-2. observer mitm (optionnal)
+1. work with the nordic branch of the project to make our RP compatible with the server, the goal is to be able to log in the server without being rejected.
 
 3. create proxy tequilla->Gluu to make epfl applications Gluu compatible
