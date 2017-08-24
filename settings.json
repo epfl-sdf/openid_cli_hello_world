@@ -1,5 +1,5 @@
 {
-  "client_id": "@@!B99F.981F.158F.F00B!0001!AB60.2B4C!0008!1092.92FA.5B1F.996A",
+  "client_id": "@!87F1.953E.0E46.586E!0001!14E6.538A!0008!30FB.4074.87F2.CEFD",
   "client_secret": "tototutu",
   "response_type": "code",
   "authorization_endpoint": "https://128.178.116.13/oxauth/seam/resource/restv1/oxauth/authorize",
