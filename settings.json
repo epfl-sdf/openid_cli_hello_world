@@ -1,8 +1,8 @@
 {
-  "client_id": "@!87F1.953E.0E46.586E!0001!14E6.538A!0008!30FB.4074.87F2.CEFD",
+  "client_id": "@!54B4.36AC.9F5F.F94B!0001!419B.C92A!0008!1BC3.9688.21BE.65E0",
   "client_secret": "tototutu",
   "response_type": "code",
   "authorization_endpoint": "https://128.178.116.13/oxauth/seam/resource/restv1/oxauth/authorize",
   "token_endpoint": "https://128.178.116.13/oxauth/seam/resource/restv1/oxauth/token",
-  "redirect_uri": "https://128.178.116.13/oxauth/login"
+  "redirect_uri": "https://10.92.104.185:5443/callback"
 }
