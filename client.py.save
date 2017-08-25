@@ -18,7 +18,7 @@ import json
 import ssl
 import urllib
 import urllib2
-from datetime import datetime
+import datetime
 from datetime import timedelta
 
 import tools
@@ -108,11 +108,18 @@ class Client:
         """
         # Assignment 1
         # Fill in the the missing data for the token request
-        
-	#string t = (datetime.now() + timedelta(minutes=2)).isoformat(' ').
-	print (datetime.now() + timedelta(minutes=2)).isoformat(' ')
+        date time = datetime.now() +
 
 	data = {
+		'iss': self.config['client_id'],
+		'sub': self.config['client_id'],
+		'aud': self.config['token_endpoint'],
+		'scope': self.config['scope'],
+		'code': self.config['code'],
+		'client_id': self.config['client_id'],
+		'jti': self.config['password'],
+		'redirect_uri': self.config['redirect_uri'],
+		'grant_type': 'authorization_code'
 		}
 	#https://gluu.org/docs/ce/api-guide/openid-connect-api/ (required fields from Gluu server)
 
