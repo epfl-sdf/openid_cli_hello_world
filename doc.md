@@ -1,6 +1,6 @@
 # Creating a client
 
-We want to create a client (web application) which can register a person (EndUser) to the authentication server (our Gluu).
+We want to create a client (web application) which can register a person (EndUser) to the authentication server (our Gluu server).
 A user cannot authenticate himself to the Gluu server if he is not registered. Same for the application.
 
 ## Registering manually the web application
