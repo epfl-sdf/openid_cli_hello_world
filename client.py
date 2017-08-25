@@ -96,7 +96,7 @@ class Client:
         session['state'] = state
         request_args = self.__authn_req_args(state)
         login_url = "%s?%s" % (self.config['authorization_endpoint'], urllib.urlencode(request_args))
-        print "Redirect to federation service %s" % login_url
+        print "Authorization %s" % login_url
         return login_url
 
     def get_token(self, code):
@@ -132,10 +132,12 @@ class Client:
         :param state: state to send to authorization server
         :return a map of arguments to be sent to the authz endpoint
         """
-        args = {'scope': self.config['scope'],
+        args = {
+		'scope': self.config['scope'],
                 'response_type': 'code',
                 'client_id': self.config['client_id'],
-                'state': state}
+                'state': state
+	}
 
         if 'authn_parameters' in self.config:
             args.update(self.config['authn_parameters'])

@@ -1,12 +1,14 @@
 {
-  "client_id": "@!38FB.BA7A.D6CB.AD83!0001!F46C.A0FB!0008!A56A.E9FF.C778.7A2E",
+  "client_id": "@!54B4.36AC.9F5F.F94B!0001!419B.C92A!0008!1BC3.9688.21BE.65E0",
   "client_secret": "tototutu",
   "issuer": "https://128.178.116.13",
-  "redirect_uri": "https://10.92.104.185:5443/callback",
+  "authorization_endpoint": "https://128.178.116.13/oxauth/seam/resource/restv1/oxauth/authorize",
   "scope": "openid",
   "discovery_url": "https://128.178.116.13/.well-known/openid-configuration",
   "jwks_uri": "https://128.178.116.13/oxauth/seam/resource/restv1/oxauth/jwks",
   "verify_ssl_server": false,
-  "response_type": "code token id_token",
+  "response_type": "code",
+  "redirect_uri": "https://128.178.116.13:5443/callback",
+  "display": "popup",
   "debug": true
 }

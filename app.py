@@ -66,6 +66,8 @@ def start_code_flow():
     :return: redirects to the authorization server with the appropriate parameters set.
     """
     login_url = _client.get_authn_req_url(session)
+    print "the login url:"
+    print login_url
     return redirect(login_url)
 
 
