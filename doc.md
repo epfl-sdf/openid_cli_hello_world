@@ -11,7 +11,7 @@ Go in the side bar, OpenID Connect>clients, then click on button "add client" an
 
 Client Name, Client Secret.
 
-Go at the bottom of the page, click "add Login Redirect URI", put: https://<your web application IP adress>:5443/callback
+Go at the bottom of the page, click "add Login Redirect URI", put: https://<<your web application IP adress>>:5443/callback
 
 Go at the bottom of the page, click "add Scope", search for "openid", then select "openid", then click the add button.
 
