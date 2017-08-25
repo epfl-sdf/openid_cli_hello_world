@@ -11,9 +11,15 @@ Go in the side bar, OpenID Connect>clients, then click on button "add client" an
 
 Client Name, Client Secret.
 
-Go at the bottom of the page, click "add Login Redirect URI", put: https://<your web application IP adress>/callback
+Go at the bottom of the page, click "add Login Redirect URI", put: https://<your web application IP adress>:5443/callback
 
-Click add to add web application. Get the INUM of your client in your clipboard (ctrl-c)
+Go at the bottom of the page, click "add Scope", search for "openid", then select "openid", then click the add button.
+
+Go at the bottom of the page, click "add Response Type", check "code", click ok.
+
+Click add to add web application. 
+
+Get the INUM of your client in your clipboard (ctrl-c)
 
 ## Registering manually the user
 Go to the sidebar: Users>add Person
@@ -34,7 +40,7 @@ To fill the next two fields, you need to go to your Gluu server web interface, s
 Look for "authorizationEndpoint", select the displayed url and paste it into the "authorization_endpoint" attribute in your settings.json file.
 Then look for "tokenEndpoint", select the displayed url and paste it into the "token_endpoint" attribute.
 
-Set "redirect_uri" to "https://<your web application IP adress>/callback"
+Set "redirect_uri" to "https://<your web application IP adress>:5443/callback"
 
 You are done configurating your JSON file, save it and exit it.
 
