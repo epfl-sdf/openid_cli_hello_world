@@ -9,6 +9,8 @@ Go to your server (`https://<your server IP adress>`) with your browser (prefera
 We will now register your web application:
 Go in the side bar, OpenID Connect>clients, then click on the button "add client" and fill the following fields: Client Name, Client Secret
 
+Remember your Client Secret, it will be used later.
+
 Go at the bottom of the page, click "add Login Redirect URI", put: `https://<your web application IP adress>:5443/callback`
 
 Go at the bottom of the page, click "add Scope", search for "openid" in the search field, then select "openid", then click the "add" button.
