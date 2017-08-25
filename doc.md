@@ -17,7 +17,7 @@ Go at the bottom of the page, click "add Response Type", check the checkbox "cod
 
 Click "add" at the very bottom of the page to add your web application. 
 
-Copy the INUM of your client in your clipboard, you will need it later (OpenID Connect>Clients, look for you web application with your client name).
+Copy the INUM of your client in your clipboard, you will need it later (OpenID Connect>Clients, look for you web application with your Client Name).
 
 ## Registering manually the user
 Go to the sidebar: Users>add Person
