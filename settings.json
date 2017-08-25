@@ -1,4 +1,3 @@
-
 {
   "client_id": "@!45FD.E2C2.5E94.8A5A!0001!8FD2.5B79!0008!649C.9B12.B697.8889",
   "client_secret": "tototutu",
@@ -6,8 +5,5 @@
   "scope": "openid",
   "authorization_endpoint": "https://128.178.116.76/oxauth/seam/resource/restv1/oxauth/authorize",
   "token_endpoint": "https://128.178.116.76/oxauth/seam/resource/restv1/oxauth/token",
-  "issuer": "https://128.178.116.76",
-  "response_type": "code",
-  "verify_ssl_server": "false",
-  "jwks_uri":"https://128.178.116.76/oxauth/seam/resource/restv1/oxauth/jwks"
+  "response_type": "code"
 }
