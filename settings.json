@@ -10,5 +10,7 @@
   "response_type": "code",
   "redirect_uri": "https://128.178.116.13:5443/callback",
   "display": "popup",
+  "token_endpoint": "https://128.178.116.13/oxauth/seam/resource/restv1/oxauth/token",
+  "code": "",
   "debug": true
 }

@@ -107,16 +107,19 @@ class Client:
         # Assignment 1
         # Fill in the the missing data for the token request
         data = {
+		'iss': self.config['client_id'],
+		'sub': self.config['client_id'],
+		'aud': self.config['token_endpoint'],
 		'scope': self.config['scope'],
-		'response_type': 'code',
+		'code': self.config['code'],
 		'client_id': self.config['client_id'],
-		'redirect_uri': self.config['redirect_uri']
+		'jti': self.config['password'],
+		'redirect_uri': self.config['redirect_uri'],
+		'grant_type': 'authorization_code'
 		}
 	#https://gluu.org/docs/ce/api-guide/openid-connect-api/ (required fields from Gluu server)
 
         # Exchange code for tokens
-	print "trying to get the token from "
-	print self.config['token_endpoint']
 	print "\n with the following data"
 	print data
 	print "\n\n encoded data"
