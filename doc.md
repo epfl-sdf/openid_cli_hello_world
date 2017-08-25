@@ -4,22 +4,20 @@ We want to create a client (web application) which can register a person (EndUse
 A user cannot authenticate himself to the Gluu server if he is not registered. Same for the application.
 
 ## Registering manually the web application
-Go to your server and login as admin (put admin in the username field and your password in the password field). You now arrived on the GUI oxTrust of your Gluu server as the admin.
+Go to your server (`https://<your server IP adress>`) and login as the admin (put "admin" in the username field and your password in the password field). You have now arrived on the GUI oxTrust of your Gluu server as the admin. You are ready to manage clients and users of your Gluu server.
 
-We will register your web application:
-Go in the side bar, OpenID Connect>clients, then click on button "add client" and fill the following fields:
-
-Client Name, Client Secret.
+We will now register your web application:
+Go in the side bar, OpenID Connect>clients, then click on the button "add client" and fill the following fields: Client Name, Client Secret
 
 Go at the bottom of the page, click "add Login Redirect URI", put: `https://<your web application IP adress>:5443/callback`
 
-Go at the bottom of the page, click "add Scope", search for "openid", then select "openid", then click the add button.
+Go at the bottom of the page, click "add Scope", search for "openid" in the search field, then select "openid", then click the "add" button.
 
-Go at the bottom of the page, click "add Response Type", check "code", click ok.
+Go at the bottom of the page, click "add Response Type", check the checkbox "code", click "ok".
 
 Click "add" at the very bottom of the page to add your web application. 
 
-Get the INUM of your client in your clipboard (ctrl-c)
+Copy the INUM of your client in your clipboard, you will need it later (OpenID Connect>Clients, look for you web application with your client name).
 
 ## Registering manually the user
 Go to the sidebar: Users>add Person
