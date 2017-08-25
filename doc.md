@@ -11,13 +11,13 @@ Go in the side bar, OpenID Connect>clients, then click on button "add client" an
 
 Client Name, Client Secret.
 
-Go at the bottom of the page, click "add Login Redirect URI", put: https://<>your web application IP adress<>:5443/callback
+Go at the bottom of the page, click "add Login Redirect URI", put: `https://<your web application IP adress>:5443/callback`
 
 Go at the bottom of the page, click "add Scope", search for "openid", then select "openid", then click the add button.
 
 Go at the bottom of the page, click "add Response Type", check "code", click ok.
 
-Click add to add web application. 
+Click "add" at the very bottom of the page to add your web application. 
 
 Get the INUM of your client in your clipboard (ctrl-c)
 
