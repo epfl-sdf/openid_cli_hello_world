@@ -19,6 +19,7 @@
 #pip3 install mitmproxy
 
 echo ------------ install virtualenv
+sudo apt-get update
 sudo apt-get -y install python-pip
 sudo pip2 install virtualenv
 
