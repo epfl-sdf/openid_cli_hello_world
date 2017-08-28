@@ -42,6 +42,10 @@ To fill the next two fields, you need to go to your Gluu server web interface, s
 Look for "authorizationEndpoint", select the displayed url and paste it into the "authorization_endpoint" attribute in your settings.json file.
 Then look for "tokenEndpoint", select the displayed url and paste it into the "token_endpoint" attribute.
 
+Look for the url of "Issuer" and put it in the "issuer" field.
+
+Look for the url of "jwksUri" and put it in the  "jwks_uri" field.
+
 (You can log out of the web server interface in the top right corner since you don't need it anymore.)
 
 In the settings.json file, set "redirect_uri"  to `https://<your web application IP adress>:5443/callback`
