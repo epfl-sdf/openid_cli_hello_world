@@ -39,7 +39,12 @@ Laissez "response_type" tel qu'il est.
 Pour remplir les deux prochains champs, vous aurez besoin de retourner sur l'interface d'administration du serveur Gluu, chercher dans la barre latérale "Configuration>JSON Configuration" et sélectionner l'onglet "OxAuth Configuration".
 
 Cherchez "authorizationEndpoint", sélectionnez l'url et collez-la pour l'attribut "authorization_endpoint" de votre fichier settings.json
+
 Faites de même pour "tokenEndpoint", copiez l'url correspondante dans l'attribut "token_endpoint".
+
+Cherchez l'url "Issuer" et mettez-la dans le champ "issuer".
+
+Cherchez l'url "jwksUri" et mettez-la dans le champ "jwks_uri".
 
 (vous pouvez maintenant vous déconnecter de votre serveur Gluu)
 
