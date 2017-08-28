@@ -4,8 +4,6 @@
 
 #source: https://github.com/curityio/example-python-openid-connect-client
 
-
-
 #virtFold="venvURL"
 #sudo apt-get install python3-dev python3-pip libffi-dev libssl-dev
 #sudo apt install virtualenv
