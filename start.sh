@@ -24,6 +24,13 @@
 #adresse IP du serveur
 THEIP=$(/sbin/ifconfig ens18 | /bin/grep "inet ad" | /usr/bin/cut -f2 -d: | /usr/bin/awk '{print $1}')
 
+
+#creation de la session screen "proxy"
+screen -S proxy
+
+#creation de la session screen "client"
+screen -S client
+
 echo -e " 
 Afin de garder le proxy WEB permanent, il serait bien de le faire tourner dans un 'screen' avec:
 screen -S testwwp     pour entrer dans screen
@@ -37,13 +44,7 @@ On accède à ce petit Hello Word avec:
 
 https://$THEIP:5443
 
-
 "
-
-#creation de la session screen "proxy"
-screen -S proxy
-
-screen -S client
 
 echo "Liste des screens actifs"
 screen -list
