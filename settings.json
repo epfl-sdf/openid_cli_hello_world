@@ -1,6 +1,6 @@
 {
-  "client_id": "",
-  "client_secret": "tototutu",
+  "client_id": "INUM du client",
+  "client_secret": "Client Secret de votre choix",
   "redirect_uri": "https://<adresse IP de l'application client>:5443/callback",
   "scope": "openid",
   "authorization_endpoint": "https://<adresse IP du serveur Gluu>/oxauth/seam/resource/restv1/oxauth/authorize",
