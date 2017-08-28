@@ -2,11 +2,6 @@
 # petit script pour démarrer le Hello Wolrd du client ipenid
 #zf170821.1529
 
-#source: 
-
-
-
-
 # Teste si les arguments sont bien passés 
 #if (( $# < 2 ))
 #then
@@ -26,6 +21,9 @@
 #    exit
 #fi
 
+#adresse IP du serveur
+THEIP=$(/sbin/ifconfig ens18 | /bin/grep "inet ad" | /usr/bin/cut -f2 -d: | /usr/bin/awk '{print $1}')
+
 echo -e " 
 Afin de garder le proxy WEB permanent, il serait bien de le faire tourner dans un 'screen' avec:
 screen -S testwwp     pour entrer dans screen
@@ -42,8 +40,30 @@ https://$THEIP:5443
 
 "
 
-THEIP=$(/sbin/ifconfig ens18 | /bin/grep "inet ad" | /usr/bin/cut -f2 -d: | /usr/bin/awk '{print $1}')
+#creation de la session screen "proxy"
+screen -S proxy
 
+screen -S client
+
+echo "Liste des screens actifs"
+screen -list
+
+echo '------ Créé le screen "client" --------
+Pour switcher au screen "client" afin le log de l'application client, exécuter: "screen -r client"'
+
+"
+echo '
+------ Créé le screen "proxy" --------
+Pour switcher au screen "proxy" afin d'observer les échanges serveur-client, exécuter: "screen -r proxy"
+
+'
+echo '
+Pour tabber à travers les screens: "CTRL+A", puis "n"
+Plus d'informations sur le fonctionnement de screen: "https://docs.google.com/document/d/1MqJu9ppWayAEUfN6YZkVTt7ERt509_Ake9oafjKemL4/edit"
+
+'
+
+#creation du dossier virtuel et lancement du programme
 virtFold="venvOpenid"
 source $virtFold/bin/activate
 
