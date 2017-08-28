@@ -16,6 +16,9 @@
 #pip3 install beautifulsoup4
 #deactivate
 
+echo ------------ install mitmproxy
+sudo apt-get install python3-dev python3-pip libffi-dev libssl-dev
+pip3 install mitmproxy
 
 echo ------------ install virtualenv
 sudo apt-get -y install python-pip
