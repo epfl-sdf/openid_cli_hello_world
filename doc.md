@@ -44,7 +44,7 @@ Then look for "tokenEndpoint", select the displayed url and paste it into the "t
 
 (You can log out of the web server interface in the top right corner since you don't need it anymore.)
 
-Set "redirect_uri" to `https://<your web application IP adress>:5443/callback`
+In the settings.json file, set "redirect_uri"  to `https://<your web application IP adress>:5443/callback`
 
 You are done configurating your JSON file, save it and exit it.
 
