@@ -8,7 +8,7 @@ Lancer le fichier d'installation
 ./install.sh
 ```
 
-## Configuration and lancement du client
+## Configuration et lancement du client
 Puis lire la documentation:<br>
 https://github.com/epfl-sdf/openid_cli_hello_world/blob/master/DOC.md
 
