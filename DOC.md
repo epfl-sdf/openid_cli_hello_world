@@ -5,7 +5,7 @@ Un utilisateur ne peut pas se connecter au serveur d'identification si celui-ci 
 ## Enregistrement manuel du client sur le serveur Gluu
 Allez sur votre serveur (https://<your server IP adress>, n'oubliez pas le https:// !) avec votre navigateur (de préférence chrome ou firefox) et connectez-vous en tant qu'administrateur (mettez "admin" comme nom d'utilisateur et votre mot de passe (du serveur Gluu)). Vous devez arriver sur l'interface OxTrust vous permettant d'administrer les utilisateurs et les clients.
 
-Enregistrer le client:
+### Enregistrer le client:
 Allez dans la barre latérale, *OpenID Connect>clients*, puis cliquez sur *add client* et remplissez les champs: *Client Name*, *Client Secret*
 
 Notez le Client Secret, nous en aurons besoin plus tard.
@@ -36,21 +36,22 @@ Remplissez "client_id" par votre INUM (pour rappel, il est visible sous OpenID C
 
 Remplissez "client_secret" par votre Client Secret.
 
-Laissez "response_type" tel qu'il est.
+Mettez dans "redirect_uri" l'url que vous trouverez au même endroit que le *client_id*
 
-Pour remplir les deux prochains champs, vous aurez besoin de retourner sur l'interface d'administration du serveur Gluu, chercher dans la barre latérale "Configuration>JSON Configuration" et sélectionner l'onglet "OxAuth Configuration".
+Puis remplissez les champs:
 
-Cherchez "authorizationEndpoint", sélectionnez l'url et collez-la pour l'attribut "authorization_endpoint" de votre fichier settings.json
+ "response_type": "code",
+  "verify_ssl_server": "false",
+  "scope": "openid",
+  
+Pour remplir les prochains champs, vous aurez besoin de retourner sur l'interface d'administration du serveur Gluu, dans la barre latérale "Configuration>JSON Configuration" et sélectionner l'onglet "OxAuth Configuration".
 
-Faites de même pour "tokenEndpoint", copiez l'url correspondante dans l'attribut "token_endpoint".
+Cherchez chaque fois les bonnes URL's pour les champs suivant:
 
-Cherchez l'url "Issuer" et mettez-la dans le champ "issuer".
-
-Cherchez l'url "jwksUri" et mettez-la dans le champ "jwks_uri".
-
-(vous pouvez maintenant vous déconnecter de votre serveur Gluu)
-
-Mettez dans "redirect_uri" l'url suivante `https://<adresse IP de votre client>:5443/callback`
+"authorization_endpoint": cherchez: *authorizationEndpoint*
+"token_endpoint": cherchez: *tokenEndpoint*
+"issuer": cherchez: *Issuer*
+"jwks_uri": cherchez: *jwksUri*
 
 Vous avez terminé de configurer votre fichier settings.json, sauvez-le et revenez dans le dossier openid_cli_hello_world.
 
