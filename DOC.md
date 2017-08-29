@@ -64,7 +64,7 @@ Cherchez chaque fois les bonnes URL's pour les champs suivants:
 
 Vous avez terminé de configurer votre fichier settings.json, sauvez-le et revenez dans le dossier openid_cli_hello_world.
 
-## Lancer le client<a name="client_lnch"></a>
+## Lancer le client<a name="client_launch"></a>
 Executez `./start.sh`.
 
 Ouvrez une fenêtre de navigation privée (ctrl-maj-n sur chrome, ctrl-maj-p sur firefox) afin de ne pas avoir affaire à d'anciens cookies, allez sur `https:<adresse IP de votre client>:5443`, cliquez sur *sign in*, connectez-vous en tant qu'utilisateur.
