@@ -70,4 +70,4 @@ Executez `./start.sh`
 Ouvrez une fenêtre de navigation privée (ctrl-maj-n sur chrome, ctrl-maj-p sur firefox) afin de ne pas avoir affaire à d'anciens cookies. Allez sur https:\<adresse IP de votre client\>:5443, cliquez sur *sign in* puis connectez-vous en tant qu'utilisateur.
 
 ## Note<a name="notes"></a>
-Faites attention à chaque tentative de connexion: fermez toutes vos fenêtre actives de votre navigateur puis ouvrez une fenêtre de navigation **privée** afin de ne pas avoir affaire aux cookies perturbant l'authentification.
+_Faites attention à chaque tentative de connexion_: fermez toutes vos fenêtre actives de votre navigateur puis ouvrez une fenêtre de navigation **privée** afin de ne pas avoir affaire aux cookies perturbant l'authentification.
