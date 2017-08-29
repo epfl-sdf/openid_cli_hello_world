@@ -1,4 +1,4 @@
-#Petit Hello World pour tester en tant que client un serveur OpenID
+# Petit Hello World pour tester en tant que client un serveur OpenID
 
 Petit client (application web) pouvant authentifier un utilisateur (EndUser) à un serveur d'authentification OpenID (par exemple votre serveur Gluu). 
 
