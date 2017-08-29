@@ -1,8 +1,10 @@
 #!/bin/bash
 # petit script pour installer le Hello Wolrd du client openid
-#zf170821.1715
+#zf170829.1502
 
 #source: https://github.com/curityio/example-python-openid-connect-client
+
+echo ------------ start
 
 #virtFold="venvURL"
 #sudo apt-get install python3-dev python3-pip libffi-dev libssl-dev
@@ -23,13 +25,16 @@ sudo apt-get update
 sudo apt-get -y install python-pip
 sudo pip2 install virtualenv
 
+echo ------------ create virtualenv
 #Create virtual environement folder
 virtFold="venvOpenid"
 rm -rf $virtFold
 virtualenv -p /usr/bin/python2 $virtFold
 source $virtFold/bin/activate
 
+echo ------------ install required package
 #Install required packages
 pip2 install -r requirements.txt
 
 deactivate
+echo ------------ end
