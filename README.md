@@ -1,3 +1,7 @@
+#Petit Hello World pour tester en tant que client un serveur OpenID
+
+Petit client (application web) pouvant authentifier un utilisateur (EndUser) à un serveur d'authentification OpenID (par exemple votre serveur Gluu). 
+
 ## Installation de l'application web (client)
 Lancer le fichier d'installation
 ```
