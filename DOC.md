@@ -1,5 +1,5 @@
 # Créer un client
-On veut créer un client (application web) pouvant connecter un utilisateur (EndUser) à un serveur d'authentification (votre serveur Gluu).
+Petit client (application web) pouvant authentifier un utilisateur (EndUser) à un serveur d'authentification OpenID (par exemple votre serveur Gluu).<br>
 Un utilisateur ne peut pas se connecter au serveur d'identification si celui-ci n'est pas enregistré sur le serveur, de même pour l'application web.
 
 ## Enregistrement manuel du client sur le serveur Gluu
