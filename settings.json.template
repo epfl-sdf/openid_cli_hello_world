@@ -1,0 +1,12 @@
+{
+  "client_id": "",
+  "client_secret": "",
+  "redirect_uri": "",
+  "response_type": "code",
+  "verify_ssl_server": "false",
+  "scope": "openid",
+  "authorization_endpoint": "",
+  "token_endpoint": "",
+  "issuer": "",
+  "jwks_uri":""
+}
