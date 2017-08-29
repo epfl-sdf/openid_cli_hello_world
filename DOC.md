@@ -16,7 +16,7 @@ Un utilisateur ne peut pas se connecter au serveur d'identification si celui-ci 
 Allez sur votre serveur (https://\<IP de votre serveur\>, n'oubliez pas le https:// !) avec votre navigateur (de préférence chrome ou firefox) et connectez-vous en tant qu'administrateur (mettez "admin" comme nom d'utilisateur et votre mot de passe (du serveur Gluu)). Vous devez arriver sur l'interface OxTrust vous permettant d'administrer les utilisateurs et les clients.
 
 ### Enregistrer le client<a name="enr_client"></a>
-Allez dans la barre latérale, *OpenID Connect>clients*, puis cliquez sur *add client* et remplissez les champs: *Client Name*, *Client Secret*
+Allez dans la barre latérale, `OpenID Connect>clients`, puis cliquez sur *add client* et remplissez les champs: *Client Name*, *Client Secret*
 
 Notez le *Client Secret*, nous en aurons besoin plus tard.
 
@@ -29,39 +29,38 @@ Allez en bas de la page, cliquez sur *add Response Type*, validez *code*, clique
 Cliquez *add* tout en bas de la page pour ajouter votre client. 
 
 Copier l'*INUM* de votre client dans le presse-papier, vous en aurez besoin plus tard.<br>
-Si vous en aviez besoin plus tard, on peut le retrouver avec:
-`OpenID Connect>Clients, cherchez votre client avec le Client Name correspondant`
+Si vous en aviez besoin plus tard, on peut le retrouver dans `OpenID Connect>Clients` , cherchez votre client avec le Client Name correspondant
 
 ### Enregistrer manuellement l'utilisateur<a name="enr_user"></a>
-Toujours dans l'interface d'administrations, allez dans la barre latérale: Users>add Person
+Toujours dans l'interface d'administrations, allez dans la barre latérale: `Users>add Person`
 
-Remplissez les champs et notez le username ainsi que le password (pour l'authentification). Cliquez sur "add" pour ajouter l'utilisateur.
+Remplissez les champs et notez le username ainsi que le password (pour l'authentification). Cliquez sur *add* pour ajouter l'utilisateur.
 
 Ne fermez pas encore l'interface, vous en aurez encore besoin.
 
 ## Configuration du client (settings.JSON)<a name="conf_client"></a>
 Naviguez dans votre dossier *openid_cli_hello_world*, (`cd openid_cli_hello_world`), copiez settings.json.template en settings.json, puis ouvrez le fichier *settings.json* afin de le configurer.
 
-Remplissez *client_id* par votre INUM (pour rappel, il est visible sous OpenID Connect>Clients) ou collez-y ce que vous aviez dans le presse-papier.
+Remplissez "client_id" par votre INUM (pour rappel, il est visible sous OpenID Connect>Clients) ou collez-y ce que vous aviez dans le presse-papier.
 
-Remplissez *client_secret* par votre Client Secret.
+Remplissez "client_secret" par votre *Client Secret*.
 
-Mettez dans *redirect_uri* l'url que vous trouverez au même endroit que le *client_id*
+Mettez dans "redirect_uri" l'url que vous trouverez au même endroit que le *client_id*
 
 Puis remplissez les champs:
 
  "response_type": "code",
-  "verify_ssl_server": "false",
-  "scope": "openid",
+ "verify_ssl_server": "false",
+ "scope": "openid",
   
-Pour remplir les prochains champs, vous aurez besoin de retourner sur l'interface d'administration du serveur Gluu, dans la barre latérale *Configuration>JSON Configuration* et sélectionner l'onglet *OxAuth Configuration*.
+Pour remplir les prochains champs, vous aurez besoin de retourner sur l'interface d'administration du serveur Gluu, dans la barre latérale `Configuration>JSON Configuration` et sélectionner l'onglet *OxAuth Configuration*.
 
-Cherchez chaque fois les bonnes URL's pour les champs suivant:
+Cherchez chaque fois les bonnes URL's pour les champs suivants:
 
-"authorization_endpoint": cherchez: *authorizationEndpoint*
-"token_endpoint": cherchez: *tokenEndpoint*
-"issuer": cherchez: *Issuer*
-"jwks_uri": cherchez: *jwksUri*
+"authorization_endpoint": cherchez *authorizationEndpoint*
+"token_endpoint": cherchez *tokenEndpoint*
+"issuer": cherchez *Issuer*
+"jwks_uri": cherchez *jwksUri*
 
 Vous avez terminé de configurer votre fichier settings.json, sauvez-le et revenez dans le dossier openid_cli_hello_world.
 
