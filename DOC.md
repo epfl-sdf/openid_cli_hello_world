@@ -13,7 +13,7 @@ Petit client (application web) pouvant authentifier un utilisateur (EndUser) à 
 Un utilisateur ne peut pas se connecter au serveur d'identification si celui-ci n'est pas enregistré sur le serveur, de même pour l'application web.
 
 ### Accès à l'interface d'administration du serveur<a name="GUI"></a>
-Allez sur votre serveur (https://<<your server IP adress>>, n'oubliez pas le https:// !) avec votre navigateur (de préférence chrome ou firefox) et connectez-vous en tant qu'administrateur (mettez "admin" comme nom d'utilisateur et votre mot de passe (du serveur Gluu)). Vous devez arriver sur l'interface OxTrust vous permettant d'administrer les utilisateurs et les clients.
+Allez sur votre serveur (https://\<your server IP adress\>, n'oubliez pas le https:// !) avec votre navigateur (de préférence chrome ou firefox) et connectez-vous en tant qu'administrateur (mettez "admin" comme nom d'utilisateur et votre mot de passe (du serveur Gluu)). Vous devez arriver sur l'interface OxTrust vous permettant d'administrer les utilisateurs et les clients.
 
 ### Enregistrer le client<a name="enr_client"></a>
 Allez dans la barre latérale, *OpenID Connect>clients*, puis cliquez sur *add client* et remplissez les champs: *Client Name*, *Client Secret*
