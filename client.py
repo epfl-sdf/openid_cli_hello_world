@@ -108,23 +108,39 @@ class Client:
         """
         # Assignment 1
         # Fill in the the missing data for the token request
-        
+ 
 	#string t = (datetime.now() + timedelta(minutes=2)).isoformat(' ').
-	print (datetime.now() + timedelta(minutes=2)).isoformat(' ')
+	print "\n\n",(datetime.now() + timedelta(minutes=2)).isoformat(' ')
 
 	data = {
+		#http://tutorials.jenkov.com/oauth2/authorization-code-request-response.html
+		'client_id': self.config['client_id'],
+		'client_secret': self.config['client_secret'],
+		'grant_type': 'authorization_code',
+		'code': code,
+		'redirectUri': 'https://128.178.116.13/identity/authentication/authcode'
+		#https://gluu.org/docs/ce/api-guide/openid-connect-api/
 		}
 	#https://gluu.org/docs/ce/api-guide/openid-connect-api/ (required fields from Gluu server)
 
         # Exchange code for tokens
 	print "\n with the following data"
 	print data
-	print "\n\n encoded data"
-	print urllib.urlencode(data)
+	print "\n\n encoded data",urllib.urlencode(data)
 	print "\n\n"
-        token_response = urllib2.urlopen(self.config['token_endpoint'], urllib.urlencode(data), context=self.ctx)
-        print "token response:"
-	print token_response
+ 
+	#BUG----------------------------------------------------------------------------------V
+	#method2(requete)
+	#token_response = urllib2.Request(self.config['token_endpoint'], urllib.urlencode(data))
+	#log de l'erreur (sur pablo1)	#token response:
+	#<urllib2.Request instance at 0x7ff044218908>
+	#Could not fetch token(s) read
+
+	#method1(open)
+	token_response = urllib2.urlopen(self.config['token_endpoint'], urllib.urlencode(data), context=self.ctx)
+        #token_response = urllib2.urlopen(self.config['token_endpoint'], context=self.ctx)
+	#print "token response:"
+	#print token_response
 	return json.loads(token_response.read())
 
     def __authn_req_args(self, state):

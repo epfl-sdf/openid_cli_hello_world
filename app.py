@@ -145,6 +145,8 @@ def call_api():
 			
                     response = urllib2.urlopen(api_request)
                     user.api_response = {'code': response.code, 'data': response.read()}
+		    print "user.api_response: "
+		    print user.api_response
                 except urllib2.HTTPError as e:
                     user.api_response = {'code': e.code, 'data': e.read()}
             else:
@@ -163,6 +165,14 @@ def oauth_callback():
     Called when the resource owner is returning from the authorization server
     :return:redirect to / with user info stored in the session.
     """
+    #imprime tous les attributs de request
+    #print ""
+    #print "request" 
+    #print request
+    #temp = vars(request)
+    #for item in temp:
+    #    print item , ' : ' , temp[item]
+
     if 'state' not in session or session['state'] != request.args['state']:
         return create_error('Missing or invalid state')
 
@@ -176,6 +186,12 @@ def oauth_callback():
 	print request.args['code']	
         token_data = _client.get_token(request.args['code'])
     except Exception as e:
+	print "e.reason:"
+	print e.reason
+	print "e.read"
+	print e.read()
+	print "e.code"
+	print e.code
         return create_error('Could not fetch token(s)', e)
     session.pop('state', None)
 
