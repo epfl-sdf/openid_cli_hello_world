@@ -46,7 +46,7 @@ Remplissez "client_id" par votre INUM (pour rappel, il est visible sous OpenID C
 
 Remplissez "client_secret" par votre *Client Secret*.
 
-Sélectionnez pour "Authentication method for the Token Endpoint" *client_secret_post*
+Sélectionnez pour "Authentication method for the Token Endpoint" la méthode *client_secret_post*
 
 Mettez dans "redirect_uri" l'url que vous trouverez au même endroit que le *client_id*
 
