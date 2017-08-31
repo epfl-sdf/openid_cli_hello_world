@@ -31,7 +31,7 @@ THEIP=$(/sbin/ifconfig ens18 | /bin/grep "inet ad" | /usr/bin/cut -f2 -d: | /usr
 echo -e " 
 Afin de garder l'appli permanente, il serait bien de la faire tourner dans un 'screen' avec:
 screen -S openid      pour entrer dans screen
-./web_server.sh       pour lancer le serveur WEB dans screen
+./start.sh            pour lancer le client dans screen
 CTRL+a,d              pour sortir de screen en laissant tourner le serveur
 screen -r openid      pour revenir dans screen
 CTRL+d                pour terminer screen
