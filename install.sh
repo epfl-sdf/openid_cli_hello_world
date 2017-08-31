@@ -6,22 +6,18 @@
 
 echo ------------ start
 
-#virtFold="venvURL"
-#sudo apt-get install python3-dev python3-pip libffi-dev libssl-dev
-#sudo apt install virtualenv
-#rm -rf $virtFold
-#virtualenv -p /usr/bin/python3 venvURL
-#source $virtFold/bin/activate 
-#pip3 install mitmproxy
-#pip3 install beautifulsoup4
-#deactivate
+echo ------------ apt-get install utils
+sudo apt-get update
+sudo apt-get install -y gnupg2 jq
+
+echo ------------ secrets uncrypt
+./acb_uncrypt.sh
 
 #echo ------------ install mitmproxy
 #sudo apt-get install python3-dev python3-pip libffi-dev libssl-dev
 #pip3 install mitmproxy
 
 echo ------------ install virtualenv
-sudo apt-get update
 sudo apt-get -y install python-pip
 export LC_ALL=C
 sudo -H pip2 install --upgrade pip
