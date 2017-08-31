@@ -17,10 +17,6 @@ read -p "appuyer sur Enter pour continuer"
 echo ------------ secrets uncrypt
 ./acb_uncrypt.sh
 
-echo ------------ install mitmproxy
-sudo apt-get -y install python3-dev python3-pip libffi-dev libssl-dev
-pip3 install mitmproxy
-
 echo ------------ install virtualenv
 sudo apt-get -y install python-pip
 export LC_ALL=C
@@ -40,3 +36,8 @@ pip2 install -r requirements.txt
 
 deactivate
 echo ------------ end
+
+echo ------------ install mitmproxy
+sudo apt-get -y install python3-dev python3-pip libffi-dev libssl-dev
+
+./mitmproxy/install_mitmproxy.sh
