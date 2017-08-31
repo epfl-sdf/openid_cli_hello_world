@@ -4,7 +4,8 @@
     2. [Enregistrer le client:](#enr_client)
     3. [Enregistrer manuellement l'utilisateur](#enr_user)
 2. [Configuration du client](#conf_client)
-3. [Lancer le client](#client_launch)
+3. [(Dé)cryptage du fichier settings.json](#client_crypt)
+3. [Lancer le client (et le proxy)](#client_launch)
 4. [Note](#notes)
 
 
@@ -67,8 +68,25 @@ Cherchez chaque fois les bonnes URL's pour les champs suivants:
 
 Vous avez terminé de configurer votre fichier settings.json, sauvez-le et revenez dans le dossier openid_cli_hello_world.
 
-## Lancer le client <a name="client_launch"></a>
-Executez `./start.sh`
+## (Dé)cryptage du fichier settings.json <a name="client_crypt"></a>
+Vous pouvez (dé)crypter le fichier "settings.json" en exécutant: `./acb_crypt.sh` (`./acb_uncrypt.sh`) avec un mot de passe de votre choix.
+
+## Lancer le client (et le proxy) <a name="client_launch"></a>
+Vérifiez que vous avez un fichier "settings.json" non-crypté.
+
+On rappelle que screen est un outil très utile pour faire tourner une application:
+Afin de garder l'appli permanente, il serait bien de la faire tourner dans un 'screen' avec:
+
+screen -S *openid*    pour entrer dans screen<br>
+./start.sh            pour lancer le client une fois dans le screen openid<br>
+CTRL+a,d              pour sortir de screen en laissant tourner le serveur<br>
+screen -r *openid*      pour revenir dans le screen openid<br>
+CTRL+d                pour terminer screen<br>
+screen -list          pour lister tous les screen en fonctionement<br>
+
+Executez `./start.sh` pour lancer le client.
+
+Si vous désirez voir le client à l'aide d'un proxy, lancer le proxy (dans un screen *proxy* par exemple) avec `./mitmproxy/start_mitmproxy.sh` 
 
 Ouvrez une fenêtre de navigation privée (ctrl-maj-n sur chrome, ctrl-maj-p sur firefox) afin de ne pas avoir affaire à d'anciens cookies. Allez sur https:\<adresse IP de votre client\>:5443, cliquez sur *sign in* puis connectez-vous en tant qu'utilisateur.
 
