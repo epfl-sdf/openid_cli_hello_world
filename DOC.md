@@ -5,7 +5,7 @@
     3. [Enregistrer manuellement l'utilisateur](#enr_user)
 2. [Configuration du client](#conf_client)
 3. [(Dé)cryptage du fichier settings.json](#client_crypt)
-3. [Lancer le client](#client_launch)
+3. [Lancer le client (et le proxy)](#client_launch)
 4. [Note](#notes)
 
 
