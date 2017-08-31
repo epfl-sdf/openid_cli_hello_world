@@ -107,15 +107,6 @@ class Client:
                 'code': code,
                 'redirect_uri': self.config['redirect_uri'],
                 'grant_type': 'authorization_code'}
-	
-	# proxy pour la seule connection qui n'est pas gere par le proxy installe sur le browser (browser-client/serveur)
-	# (connection client-serveur)
-	opener = urllib2.build_opener(
-		urllib2.HTTPHandler(),
-                urllib2.HTTPSHandler(),
-		urllib2.ProxyHandler({'http': 'http://10.92.104.185:8080'})
-	)
-	urllib2.install_opener(opener)
 
         # Exchange code for tokens
         try:
