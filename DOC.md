@@ -76,6 +76,7 @@ Vérifiez que vous avez un fichier "settings.json" non-crypté.
 
 On rappelle que screen est un outil très utile pour faire tourner une application:
 Afin de garder l'appli permanente, il serait bien de la faire tourner dans un 'screen' avec:
+
 screen -S *openid*    pour entrer dans screen<br>
 ./start.sh            pour lancer le client une fois dans le screen openid<br>
 CTRL+a,d              pour sortir de screen en laissant tourner le serveur<br>
