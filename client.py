@@ -107,7 +107,10 @@ class Client:
                 'code': code,
                 'redirect_uri': self.config['redirect_uri'],
                 'grant_type': 'authorization_code'}
-
+	
+	# Installation du proxy entre le client et le serveur
+	
+	
         # Exchange code for tokens
         try:
             token_response = urllib2.urlopen(self.config['token_endpoint'], urllib.urlencode(data), context=self.ctx)

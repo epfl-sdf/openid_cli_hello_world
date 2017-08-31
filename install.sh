@@ -10,12 +10,16 @@ echo ------------ apt-get install utils
 sudo apt-get update
 sudo apt-get install -y gnupg2 jq
 
+echo "!!!ATTENTION!!!, si vous desirez ne pas decrypter le fichier settings.json.gpg, pressez selectionner Cancel. Si oui, entrez le mot de passe pour decrypter le fichier encrypte."
+echo ""
+read -p "appuyer sur Enter pour continuer"
+
 echo ------------ secrets uncrypt
 ./acb_uncrypt.sh
 
-#echo ------------ install mitmproxy
-#sudo apt-get install python3-dev python3-pip libffi-dev libssl-dev
-#pip3 install mitmproxy
+echo ------------ install mitmproxy
+sudo apt-get -y install python3-dev python3-pip libffi-dev libssl-dev
+pip3 install mitmproxy
 
 echo ------------ install virtualenv
 sudo apt-get -y install python-pip
