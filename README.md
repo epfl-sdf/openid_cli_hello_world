@@ -1,14 +1,15 @@
-- [Petit Hello World pour tester en tant que client un serveur OpenID](#petit-hello-world-pour-tester-en-tant-que-client-un-serveur-openid)
-  * [Installation de l'application web (client)](#installation-de-lapplication-web-client)
-  * [Configuration et lancement du client](#configuration-et-lancement-du-client)
-  * [Proxy mitmproxy](#proxy-mitmproxy)
-    + [Pour lancer le proxy](#pour-lancer-le-proxy)
-    + [Pour démarrer le proxy](#pour-démarrer-le-proxy)
-  * [Sources:](#sources)
-
 # Petit Hello World pour tester en tant que client un serveur OpenID
 
 Petit client (application web) pouvant authentifier un utilisateur (EndUser) à un serveur d'authentification OpenID (par exemple votre serveur Gluu). 
+
+- [Installation de l'application web (client)](#installation-de-lapplication-web-client)
+- [Configuration et lancement du client](#configuration-et-lancement-du-client)
+- [Proxy mitmproxy](#proxy-mitmproxy)
+  * [Pour lancer le proxy](#pour-lancer-le-proxy)
+  * [Pour démarrer le proxy](#pour-démarrer-le-proxy)
+- [Sources:](#sources)
+
+
 
 ## Installation de l'application web (client)
 Lancer le fichier d'installation
