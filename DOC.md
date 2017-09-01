@@ -1,13 +1,12 @@
 # Table des matières
-1. [Créer un client](#creer_client)
-    1. [Accès à l'interface d'administration du serveur](#GUI)
-    2. [Enregistrer le client:](#enr_client)
-    3. [Enregistrer manuellement l'utilisateur](#enr_user)
-2. [Configuration du client](#conf_client)
-3. [(Dé)cryptage du fichier settings.json](#client_crypt)
-3. [Lancer le client](#client_launch)
-4. [Note](#notes)
-
+- [Créer un client<a name="creer_client"></a>](#créer-un-clienta-namecreer_clienta)
+  * [Accès à l'interface d'administration du serveur<a name="GUI"></a>](#accès-à-linterface-dadministration-du-serveura-nameguia)
+  * [Enregistrer le client<a name="enr_client"></a>](#enregistrer-le-clienta-nameenr_clienta)
+  * [Enregistrer manuellement l'utilisateur<a name="enr_user"></a>](#enregistrer-manuellement-lutilisateura-nameenr_usera)
+- [Configuration du client (settings.JSON)<a name="conf_client"></a>](#configuration-du-client-settingsjsona-nameconf_clienta)
+- [(Dé)cryptage du fichier settings.json <a name="client_crypt"></a>](#décryptage-du-fichier-settingsjson-a-nameclient_crypta)
+- [Lancer le client <a name="client_launch"></a>](#lancer-le-client-a-nameclient_launcha)
+- [Note<a name="notes"></a>](#notea-namenotesa)
 
 ## Créer un client<a name="creer_client"></a>
 Petit client (application web) pouvant authentifier un utilisateur (EndUser) à un serveur d'authentification OpenID (par exemple votre serveur Gluu).<br>
