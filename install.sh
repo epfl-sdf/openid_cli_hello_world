@@ -1,6 +1,6 @@
 #!/bin/bash
 # petit script pour installer le Hello Wolrd du client openid
-#zf170831.1441
+#zf170901.1612
 
 #source: https://github.com/curityio/example-python-openid-connect-client
 
@@ -37,7 +37,3 @@ pip2 install -r requirements.txt
 deactivate
 echo ------------ end
 
-echo ------------ install mitmproxy
-sudo apt-get -y install python3-dev python3-pip libffi-dev libssl-dev
-
-./mitmproxy/install_mitmproxy.sh
