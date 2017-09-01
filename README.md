@@ -3,7 +3,7 @@ Petit client (application web) pouvant authentifier un utilisateur (EndUser) à 
 
 - [Installation de l'application web (client)](#installation-de-lapplication-web-client)
 - [Configuration et lancement du client](#configuration-et-lancement-du-client)
-- [Sources:](#sources)
+- [Sources](#sources)
 
 ## Installation de l'application web (client)
 Lancer le fichier d'installation
@@ -15,5 +15,5 @@ Lancer le fichier d'installation
 Puis lire la documentation:<br>
 https://github.com/epfl-sdf/openid_cli_hello_world/blob/master/DOC.md
 
-## Sources:
+## Sources
 La majorité du code provient de l'example https://github.com/curityio/example-python-openid-connect-client créé par https://curity.io
