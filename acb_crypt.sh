@@ -6,4 +6,4 @@ ZSECRET="settings.json"
 
 gpg2 -c ./$ZSECRET
 #mv ../$ZSECRET.gpg .
-rm -R ./.gnupg
+rm -R ../.gnupg
