@@ -21,6 +21,8 @@ Allez dans la barre latérale, `OpenID Connect>clients`, puis cliquez sur *add c
 
 Notez le *Client Secret*, nous en aurons besoin plus tard.
 
+Sélectionnez pour "Authentication method for the Token Endpoint" la méthode *client_secret_post*
+
 Allez en bas de la page, cliquez sur *add Login Redirect URI*, mettez: https://\<IP de votre application web\>:5443/callback
 
 Allez en bas de la page, cliquez sur *add Scope*, cherchez *openid* dans la barre de recherche, sélectionnez *openid*, puis cliquez sur  le bouton *add*.
@@ -45,8 +47,6 @@ Naviguez dans votre dossier *openid_cli_hello_world*, (`cd openid_cli_hello_worl
 Remplissez "client_id" par votre INUM (pour rappel, il est visible sous OpenID Connect>Clients) ou collez-y ce que vous aviez dans le presse-papier.
 
 Remplissez "client_secret" par votre *Client Secret*.
-
-Sélectionnez pour "Authentication method for the Token Endpoint" la méthode *client_secret_post*
 
 Mettez dans "redirect_uri" l'url que vous trouverez au même endroit que le *client_id*
 
