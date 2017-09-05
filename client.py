@@ -18,6 +18,7 @@ import json
 import urllib
 import urllib2
 import tools
+import ssl
 
 # proxy pour la seule connection qui n'est pas gere par le proxy installe sur le browser (browser-client/serveur)
 # (connection client-serveur)
@@ -39,13 +40,24 @@ import tools
 #opener = urllib2.build_opener(proxy)
 #urllib2.install_opener(opener)
 
+proxies = {'https': 'http://10.92.104.172:8080'}
+proxy = urllib2.ProxyHandler(proxies)
+context = ssl.SSLContext(ssl.PROTOCOL_TLSv1_2)
+handler = urllib2.HTTPSHandler(context=context)
+#handler = urllib2.HTTPSHandler()
+opener = urllib2.build_opener(proxy, handler)
+urllib2.install_opener(opener)
+
 class Client:
+
+    urllib2.urlopen('https://www.google.ch')
+
     def __init__(self, config):
         self.config = config
         self.__init_config()
 
         print 'Getting ssl context for oauth server'
-        self.ctx = tools.get_ssl_context(self.config)
+        self.ctx = None
 
 
     def __init_config(self):
@@ -127,8 +139,6 @@ class Client:
                 'grant_type': 'authorization_code'}
 	
     	# Installation du proxy entre le client et le serveur
-	
-
 	
         # Exchange code for tokens
         try:
