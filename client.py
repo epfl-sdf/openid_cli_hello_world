@@ -50,8 +50,6 @@ urllib2.install_opener(opener)
 
 class Client:
 
-    urllib2.urlopen('https://www.google.ch')
-
     def __init__(self, config):
         self.config = config
         self.__init_config()
