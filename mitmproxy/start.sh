@@ -9,7 +9,7 @@ source $virtFold/bin/activate
 # http://docs.mitmproxy.org/en/stable/features/passthrough.html
  
 #mitmdump -v
-mitmdump --ignore ^10\.92\.104\.167:5443$
+mitmdump --insecure
 #mitmproxy
 
 
