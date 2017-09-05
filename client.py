@@ -17,9 +17,27 @@
 import json
 import urllib
 import urllib2
-
 import tools
 
+# proxy pour la seule connection qui n'est pas gere par le proxy installe sur le browser (browser-client/serveur)
+# (connection client-serveur)
+
+#proxies = {'https': 'http://10.92.104.172:8080'}
+#proxy = urllib2.ProxyHandler(proxies)
+#handler = urllib2.HTTPSHandler(context=self.ctx)
+#opener = urllib2.build_opener(proxy, handler)
+#urllib2.install_opener(opener)
+
+#opener = urllib2.build_opener(
+#    urllib2.HTTPHandler(),
+#    urllib2.HTTPSHandler(),
+#    urllib2.ProxyHandler({'https': 'http://10.92.104.172:8080'})
+#)
+#urllib2.install_opener(opener)
+
+#proxy = urllib2.ProxyHandler({'https': 'https://10.92.104.172:8080'})
+#opener = urllib2.build_opener(proxy)
+#urllib2.install_opener(opener)
 
 class Client:
     def __init__(self, config):
@@ -108,17 +126,8 @@ class Client:
                 'redirect_uri': self.config['redirect_uri'],
                 'grant_type': 'authorization_code'}
 	
-	# Installation du proxy entre le client et le serveur
+    	# Installation du proxy entre le client et le serveur
 	
-# proxy pour la seule connection qui n'est pas gere par le proxy installe sur le browser (browser-client/serveur)
-	# (connection client-serveur)
-        opener = urllib2.build_opener(
-            urllib2.HTTPHandler(),
-            urllib2.HTTPSHandler(),
-            urllib2.ProxyHandler({'http': 'http://10.92.104.172:8080'})
-        )
-        urllib2.install_opener(opener)
-  
 
 	
         # Exchange code for tokens
