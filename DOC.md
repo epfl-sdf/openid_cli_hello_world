@@ -1,12 +1,15 @@
 # Table des matières
-- [Créer un client<a name="creer_client"></a>](#créer-un-clienta-namecreer_clienta)
-  * [Accès à l'interface d'administration du serveur<a name="GUI"></a>](#accès-à-linterface-dadministration-du-serveura-nameguia)
-  * [Enregistrer le client<a name="enr_client"></a>](#enregistrer-le-clienta-nameenr_clienta)
-  * [Enregistrer manuellement l'utilisateur<a name="enr_user"></a>](#enregistrer-manuellement-lutilisateura-nameenr_usera)
-- [Configuration du client (settings.JSON)<a name="conf_client"></a>](#configuration-du-client-settingsjsona-nameconf_clienta)
-- [(Dé)cryptage du fichier settings.json <a name="client_crypt"></a>](#décryptage-du-fichier-settingsjson-a-nameclient_crypta)
-- [Lancer le client <a name="client_launch"></a>](#lancer-le-client-a-nameclient_launcha)
-- [Note<a name="notes"></a>](#notea-namenotesa)
+
+- [Table des matières](#table-des-matières)
+  * [Créer un client<a name="creer_client"></a>](#créer-un-clienta-namecreer_clienta)
+    + [Accès à l'interface d'administration du serveur<a name="GUI"></a>](#accès-à-linterface-dadministration-du-serveura-nameguia)
+    + [Enregistrer le client<a name="enr_client"></a>](#enregistrer-le-clienta-nameenr_clienta)
+    + [Enregistrer manuellement l'utilisateur<a name="enr_user"></a>](#enregistrer-manuellement-lutilisateura-nameenr_usera)
+  * [Configuration du client (settings.JSON)<a name="conf_client"></a>](#configuration-du-client-settingsjsona-nameconf_clienta)
+  * [(Dé)cryptage du fichier settings.json <a name="client_crypt"></a>](#décryptage-du-fichier-settingsjson-a-nameclient_crypta)
+  * [Lancer le client <a name="client_launch"></a>](#lancer-le-client-a-nameclient_launcha)
+  * [Note<a name="notes"></a>](#notea-namenotesa)
+
 
 ## Créer un client<a name="creer_client"></a>
 Petit client (application web) pouvant authentifier un utilisateur (EndUser) à un serveur d'authentification OpenID (par exemple votre serveur Gluu).<br>
